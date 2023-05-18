@@ -20,6 +20,7 @@ import static utils.ConfigHelper.getConfig;
 import static utils.DriverManager.*;
 public class StudentAppTest {
     private WebDriverWait driverWait;
+    
     private AllStudentsPage allStudentsPage;
     private AddStudentPage addStudentPage;
     private Notifications notifications;

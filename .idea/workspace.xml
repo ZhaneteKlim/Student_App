@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70295917-08d6-432a-9746-e87e0dffa175" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/constants/AllConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/page_objects/AddStudentPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/page_objects/AllStudentsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/page_objects/Notifications.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/step_definitions/CommonStepsDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/step_definitions/MainPageStepsDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/step_definitions/StudentModalStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ConfigHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="70295917-08d6-432a-9746-e87e0dffa175" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,10 +43,16 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Huawei/Desktop/acodemy/New_studies",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "editor.preferences.completion"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -75,9 +64,19 @@
       <option name="presentableId" value="Default" />
       <updated>1684423788306</updated>
     </task>
+    <task id="LOCAL-00001" summary="Student_App">
+      <created>1684426999653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684426999654</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Student_App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Student_App" />
   </component>
 </project>
