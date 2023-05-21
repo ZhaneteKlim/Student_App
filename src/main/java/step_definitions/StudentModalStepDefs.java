@@ -3,6 +3,7 @@ package step_definitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import page_objects.AddStudentPage;
+import io.cucumber.java.en.When;
 public class StudentModalStepDefs {
     AddStudentPage addStudentPage = new AddStudentPage();
     Faker faker = new Faker();
@@ -38,5 +39,11 @@ public class StudentModalStepDefs {
 
         // Write code here that turns the phrase above into concrete actions
         //    throw new io.cucumber.java.PendingException();
+    }
+
+    @When("user click on submit button")
+    public void user_click_on_submit_button() {
+        // Write code here that turns the phrase above into concrete actions
+
     }
 }

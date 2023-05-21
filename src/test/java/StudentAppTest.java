@@ -20,12 +20,13 @@ import static utils.ConfigHelper.getConfig;
 import static utils.DriverManager.*;
 public class StudentAppTest {
     private WebDriverWait driverWait;
-    
+
     private AllStudentsPage allStudentsPage;
     private AddStudentPage addStudentPage;
     private Notifications notifications;
 
     private final Faker dataFaker = new Faker();
+    private final String APP_URL = "http://app.acodemy.lv/";
 
     @BeforeMethod(alwaysRun = true)
     public void initialize(Method method) {
