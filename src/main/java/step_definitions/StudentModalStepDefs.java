@@ -10,14 +10,14 @@ public class StudentModalStepDefs {
 
     @Given("user is on the app page")
     public void user_is_on_the_app_page() {
+        throw new io.cucumber.java.PendingException();
         // Write code here that turns the phrase above into concrete actions
-        //   throw new io.cucumber.java.PendingException();
     }
 
     @Given("user click on add student button")
     public void user_click_on_add_student_button() {
+        throw new io.cucumber.java.PendingException();
         // Write code here that turns the phrase above into concrete actions
-        //   throw new io.cucumber.java.PendingException();
     }
 
     @Given("user enters {string} in name field")
@@ -30,15 +30,14 @@ public class StudentModalStepDefs {
     @Given("user enters {string} in email field")
     public void user_enters_in_email_field() {
         addStudentPage.waitAndSetValueForEmailField(faker.internet().emailAddress());
+        throw new io.cucumber.java.PendingException();
         // Write code here that turns the phrase above into concrete actions
-        //     throw new io.cucumber.java.PendingException();
     }
 
     @Given("user enters {string} in gender field")
     public void user_enters_in_gender_field(String string) {
-
+        throw new io.cucumber.java.PendingException();
         // Write code here that turns the phrase above into concrete actions
-        //    throw new io.cucumber.java.PendingException();
     }
 
     @When("user click on submit button")

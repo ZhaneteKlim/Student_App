@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e931e18-db22-45ea-afeb-1d777812d714" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hooks/Hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/step_definitions/NotificationStepsDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/features/create_student/create_student.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page_objects/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_objects/Notifications.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/CommonStepsDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/CommonStepsDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/MainPageStepsDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/MainPageStepsDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/NotificationStepsDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/NotificationStepsDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/StudentModalStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/StudentModalStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +78,26 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.StudentAppTest">
+  <component name="RunManager" selected="Cucumber Java.Feature: create_student">
+    <configuration name="Feature: create_student" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/create_student.feature" />
+      <option name="GLUE" value="hooks step_definitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="student-app-test" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: create_student" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Create student (happy path)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/create_student.feature" />
@@ -137,6 +154,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: create_student" />
         <item itemvalue="TestNG.StudentAppTest" />
         <item itemvalue="TestNG.StudentAppTest.checkValidationMessages" />
         <item itemvalue="TestNG.StudentAppTest.openStudentApp" />
@@ -195,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682853930839</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Student-app-test-05042023">
+      <created>1684678799547</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684678799547</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,5 +266,15 @@
     <MESSAGE value="Student-app-test" />
     <MESSAGE value="Student-app-test-05042023" />
     <option name="LAST_COMMIT_MESSAGE" value="Student-app-test-05042023" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.concurrent.ExecutionException" package="java.util.concurrent" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

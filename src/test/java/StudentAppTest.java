@@ -78,13 +78,12 @@ public class StudentAppTest {
         addStudentPage.clickOnSubmitButton();
         //    assertEquals (notifications("<div class=ant-notification-notice-description").getTitle("Email janete.klim@gmail.com taken [400] [Bad Request]</div>");
 
-
+// в Notifications образцы
         //    System.out.println("<div class=\"ant-notification-notice-description\">Email janete.klim@gmail.com taken [400] [Bad Request]</div>");
         //теперь надо у всех ошибок найти локатор,
         // обьявить его в Notifications
         // и вернуть его через getText,
         // а значит и значения будут другие
-        // 3.23er@6rdA6t.B parole from ocean ssh root@165.232.116.34
 
     }
 }

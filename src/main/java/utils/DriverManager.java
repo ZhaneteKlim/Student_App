@@ -43,9 +43,7 @@ public class DriverManager {
     private static RemoteWebDriver configureRemote() {
         URL url = null;
         try {
-            //  url = new URL("https://oauth-nikita-839ac:91b032f7-1489-40cf-b55c-3bc4a3376d1c@ondemand.us-west-1.saucelabs.com:443/wd/hub");
             url = new URL("https://oauth-janete.klim-f7afd:11561b45-a8a8-42df-9adf-44f7a7cfd540@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
-            //поменять ссылку на свой аккаунт!!!
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -62,9 +60,7 @@ public class DriverManager {
         // private static MutableCapabilities configureCapabilities() {
 
         MutableCapabilities sauceOptions = new MutableCapabilities();
-        //sauceOptions.setCapability("username", "oauth-nikita-839ac");
         sauceOptions.setCapability("username", "oauth-janete.klim-f7afd");
-        //sauceOptions.setCapability("access_key", "91b032f7-1489-40cf-b55c-3bc4a3376d1c");
         sauceOptions.setCapability("access_key", "11561b45-a8a8-42df-9adf-44f7a7cfd540");
         sauceOptions.setCapability("name", testName);
         sauceOptions.setCapability("browserVersion", "latest");

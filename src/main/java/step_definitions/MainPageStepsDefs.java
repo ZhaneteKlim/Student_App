@@ -1,4 +1,5 @@
 package step_definitions;
+import io.cucumber.java.PendingException;
 
 import io.cucumber.java.en.Given;
 import page_objects.AllStudentsPage;
@@ -7,8 +8,7 @@ public class MainPageStepsDefs {
     @Given("user is on the app page")
     public void userClickOnAllStudentButton() {
         allStudentsPage.waitAndClickOnAddStudentButton();
+        throw new PendingException();
         // Write code here that turns the phrase above into concrete actions
-        // throw new io.cucumber.java.PendingException();
     }
-
 }

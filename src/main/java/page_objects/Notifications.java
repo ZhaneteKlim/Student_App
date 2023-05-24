@@ -1,4 +1,5 @@
 package page_objects;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +17,8 @@ import java.time.Duration;
 
 public class Notifications {
     private final WebDriverWait webDriverWait;
-    // singleton pattern
+    private WebDriver driver;
+
     public Notifications() {
         WebDriver driver = DriverManager.getInstance();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -27,8 +29,6 @@ public class Notifications {
     private WebElement notificationMessageElement;
 
     @FindBy(how = How.CLASS_NAME, using = "ant-notification-notice-description")
-    //  private WebElement notificationDescriptionElement;
-    // @FindBy(how = XPATH, using = "//div[@class='ant-notification-notice ant-notification-notice-error css-diro6f ant-notification-notice-closable']");
     private WebElement notificationDescriptionElement;
     private WebElement getValidationMessages;
 
@@ -55,13 +55,18 @@ public class Notifications {
 
     //TODO HomeTask:
     public String getValidationMessages() {
-        webDriverWait.until(ExpectedConditions.visibilityOf(getValidationMessages));
+        //webDriverWait.until(ExpectedConditions.visibilityOf(getValidationMessages));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("validationMessages")));
+        WebElement validationMessages = driver.findElement(By.id("validationMessages"));
         return getValidationMessages.getText();
     }
-
+    public void closePopup() {
+        WebElement closeButton = driver.findElement(By.className("ant-notification-notice-close"));
+        closeButton.click();
+    }
 }
+// TODO найти правильные aйдишники!
 
-//popup close
-// create tests
+// TODO create tests
 
 
