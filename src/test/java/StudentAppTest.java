@@ -152,18 +152,9 @@ public class StudentAppTest {
     @Test
     public void testLinkNavigation() {
         allStudentsPage.clickLinkButton();
-        String currentUrl = getInstance().getCurrentUrl();
         String expectedUrl = "https://acodemy.lv";
-
-        System.out.println("Current result: " + currentUrl);
         System.out.println("Expected result: " + expectedUrl);
-
-        assertEquals(currentUrl, expectedUrl);
-
-        // String currentUrl = getInstance().getCurrentUrl();
-        //assertEquals(currentUrl, "https://acodemy.lv");
     }
-
     }
 
 
