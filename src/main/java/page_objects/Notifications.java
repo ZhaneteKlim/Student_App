@@ -12,6 +12,7 @@ import utils.DriverManager;
 import java.time.Duration;
 
 import static org.openqa.selenium.support.How.XPATH;
+import static org.testng.AssertJUnit.assertEquals;
 
 import java.time.Duration;
 
@@ -30,7 +31,9 @@ public class Notifications {
 
     @FindBy(how = How.CLASS_NAME, using = "ant-notification-notice-description")
     private WebElement notificationDescriptionElement;
-    private WebElement getValidationMessages;
+
+    @FindBy(how = How.CLASS_NAME, using = "ant-notification-notice-with-icon")
+    private WebElement validationMessages;
 
     @FindBy(how = How.CLASS_NAME, using = "ant-notification-notice-close")
     private WebElement popUpCloseButton;
@@ -53,19 +56,19 @@ public class Notifications {
         return notificationDescriptionElement.getText();
     }
 
-    //TODO HomeTask:
+    // HomeTask:
     public String getValidationMessages() {
-        //webDriverWait.until(ExpectedConditions.visibilityOf(getValidationMessages));
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("validationMessages")));
-        WebElement validationMessages = driver.findElement(By.id("validationMessages"));
-        return getValidationMessages.getText();
+        webDriverWait.until(ExpectedConditions.visibilityOf(validationMessages));
+        WebElement validationMessages = driver.findElement((By.className("ant-notification-notice-with-icon")));
+        return validationMessages.getText();
     }
+
     public void closePopup() {
         WebElement closeButton = driver.findElement(By.className("ant-notification-notice-close"));
         closeButton.click();
     }
 }
-// TODO найти правильные aйдишники!
+
 
 // TODO create tests
 

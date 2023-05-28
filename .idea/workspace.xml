@@ -7,11 +7,6 @@
     <list default="true" id="4e931e18-db22-45ea-afeb-1d777812d714" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page_objects/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_objects/Notifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/CommonStepsDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/CommonStepsDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/MainPageStepsDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/MainPageStepsDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/NotificationStepsDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/NotificationStepsDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step_definitions/StudentModalStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step_definitions/StudentModalStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +73,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Feature: create_student">
+  <component name="RunManager" selected="TestNG.StudentAppTest.checkValidationMessages">
     <configuration name="Feature: create_student" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/create_student.feature" />
@@ -154,9 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.StudentAppTest.checkValidationMessages" />
         <item itemvalue="Cucumber Java.Feature: create_student" />
         <item itemvalue="TestNG.StudentAppTest" />
-        <item itemvalue="TestNG.StudentAppTest.checkValidationMessages" />
         <item itemvalue="TestNG.StudentAppTest.openStudentApp" />
         <item itemvalue="Cucumber Java.Scenario: Create student (happy path)" />
       </list>
@@ -220,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684678799547</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Student-app-test-05042023">
+      <created>1684922165860</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684922165860</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
