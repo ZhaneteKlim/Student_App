@@ -15,16 +15,20 @@ import static org.openqa.selenium.support.How.XPATH;
 import static org.testng.AssertJUnit.assertEquals;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Notifications {
     private final WebDriverWait webDriverWait;
     private WebDriver driver;
 
     public Notifications() {
-        WebDriver driver = DriverManager.getInstance();
+        this.driver = DriverManager.getInstance();
+        // WebDriver driver = DriverManager.getInstance();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
+
 
     @FindBy(how = How.CLASS_NAME, using = "ant-notification-notice-message")
     private WebElement notificationMessageElement;
@@ -67,9 +71,19 @@ public class Notifications {
         WebElement closeButton = driver.findElement(By.className("ant-notification-notice-close"));
         closeButton.click();
     }
-}
+
+    public void clickIdNumberButton() {
+        WebElement idNumberButton = driver.findElement(By.className("ant-table-column-title"));
+        idNumberButton.click();
+    }
+    public void testLinkNavigation() {
+        WebElement linkButton = driver.findElement(By.linkText("acodemy @ 2023"));
+    }
+    //  public void clickLinkButton() {
+     //   linkButton.click();
+   // }
+    }
 
 
-// TODO create tests
 
 

@@ -1,4 +1,6 @@
 import com.github.javafaker.Faker;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -10,20 +12,23 @@ import page_objects.Notifications;
 
 import java.lang.reflect.Method;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import static constants.AllConstants.GenderConstants.MALE;
 import static constants.AllConstants.Messages.STUDENT_SUCCESSFULLY_ADDED;
 import static constants.AllConstants.Messages.WAS_ADDED_TO_THE_SYSTEM;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 import static utils.ConfigHelper.getConfig;
 import static utils.DriverManager.*;
 public class StudentAppTest {
+
     private WebDriverWait driverWait;
 
     private AllStudentsPage allStudentsPage;
     private AddStudentPage addStudentPage;
     private Notifications notifications;
+
 
     private final Faker dataFaker = new Faker();
     private final String APP_URL = "http://app.acodemy.lv/";
@@ -94,6 +99,7 @@ public class StudentAppTest {
 
         System.out.println(validationMessages);
     }
+
     @Test(description = "Submit form with email without domain part")
     public void submitFormWithWrongEmail() {
         allStudentsPage.waitAndClickOnAddStudentButton();
@@ -126,16 +132,40 @@ public class StudentAppTest {
 
         System.out.println(validationMessages);
     }
-}
-//TODO : создать второго пользователя с таким же э-майлом и найти локатор у этой ошибки и у всех остальных
-// обьявить его в Notifications и вернуть его через getText
+
+    @Test(description = "Check the ID number button is clickable and changes the student list order")
+    public void checkIdNumberButton() {
+
+        // Get the initial list of student names
+        List<String> initialStudentList = allStudentsPage.getAllStudentNames();
+
+        // Click on ID number button
+        notifications.clickIdNumberButton();
+
+        // Get the updated list of student names
+        List<String> updatedStudentList = allStudentsPage.getAllStudentNames();
+
+        // Assert that the student list order has changed
+        assertNotEquals(initialStudentList, updatedStudentList);
+    }
+
+    @Test
+    public void testLinkNavigation() {
+        allStudentsPage.clickLinkButton();
+        String currentUrl = getInstance().getCurrentUrl();
+        String expectedUrl = "https://acodemy.lv";
+
+        System.out.println("Current result: " + currentUrl);
+        System.out.println("Expected result: " + expectedUrl);
+
+        assertEquals(currentUrl, expectedUrl);
+
+        // String currentUrl = getInstance().getCurrentUrl();
+        //assertEquals(currentUrl, "https://acodemy.lv");
+    }
+
+    }
 
 
-
-// в Notifications образцы
-        //теперь надо у всех ошибок найти локатор,
-        // обьявить его в Notifications
-        // и вернуть его через getText,
-        // а значит и значения будут другие
 
 

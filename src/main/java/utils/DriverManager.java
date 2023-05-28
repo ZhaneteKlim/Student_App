@@ -24,9 +24,6 @@ public class DriverManager {
     public static WebDriver getInstance() {
         if (driverThreadLocal.get() == null) {
             if (getConfig().getBoolean("student.app.run.locally")) {
-                //     ChromeOptions options = new ChromeOptions();
-                //     options.addArguments("--remote-allow-origins=*");
-                //     driverThreadLocal.set(new ChromeDriver(options));
                 driverThreadLocal.set(configureLocal());
             } else {
                 driverThreadLocal.set(configureRemote());
@@ -77,27 +74,6 @@ public class DriverManager {
         String status = result.isSuccess() ? "passed" : "failed";
         ((JavascriptExecutor) getInstance()).executeScript("sauce:job-result=" + status);
     }
-    //private static RemoteWebDriver configureRemote() {
-    //  EdgeOptions browserOptions = new EdgeOptions();
-    //  browserOptions.setPlatformName("Windows 11");
-    //  browserOptions.setBrowserVersion("");
-    //  Map<String, Object> sauceOptions = new HashMap<>();
-    //   sauceOptions.put("build", "selenium-build-HJAUT");
-    //   sauceOptions.put("name", "<your test name>");
-    //   browserOptions.setCapability("sauce:options", sauceOptions);
-    //   URL url = null;
-    //   try {
-    //      url = new URL("https://oauth-janete.klim-f7afd:11561b45-a8a8-42df-9adf-44f7a7cfd540@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
-    //  } catch (MalformedURLException e) {
-    //      throw new RuntimeException(e);
-    //  }
-    //  return new RemoteWebDriver(url, browserOptions);
-    // }
 
-    // private static WebDriver configureLocal() {
-    //     ChromeOptions options = new ChromeOptions();
-    //     options.addArguments("--remote-allow-origins=*");
-    //    return new ChromeDriver(options);
-    //  }
 
 }
