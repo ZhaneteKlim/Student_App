@@ -150,20 +150,11 @@ public class StudentAppTest {
 
     @Test
     public void testNextPageNavigation() {
-        // Получение текущего списка студентов
         List<String> initialStudentList = allStudentsPage.getAllStudentNames();
-
-        // Нажатие на кнопку "Next"
         allStudentsPage.clickNextPageButton();
-
-        // Ожидание загрузки следующей страницы
         WebDriverWait wait = new WebDriverWait(getInstance(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.stalenessOf(allStudentsPage.getAddStudentButton()));
-
-        // Получение нового списка студентов после перехода
         List<String> newStudentList = allStudentsPage.getAllStudentNames();
-
-        // Проверка, что новый список студентов отличается от предыдущего
         assertNotEquals(newStudentList, initialStudentList);
     }
 }
