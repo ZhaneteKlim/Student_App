@@ -154,7 +154,7 @@ public class StudentAppTest {
         List<String> initialStudentList = allStudentsPage.getAllStudentNames();
 
         // Нажатие на кнопку "Next"
-        allStudentsPage.waitAndClickNextPageButton();
+        allStudentsPage.clickNextPageButton();
 
         // Ожидание загрузки следующей страницы
         WebDriverWait wait = new WebDriverWait(getInstance(), Duration.ofSeconds(10));
