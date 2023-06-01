@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page_objects/AllStudentsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_objects/AllStudentsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page_objects/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_objects/Notifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,37 +74,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.StudentAppTest.testLinkNavigation">
-    <configuration name="Feature: create_student" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/create_student.feature" />
-      <option name="GLUE" value="hooks step_definitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="student-app-test" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: create_student" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentAppTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="student-app-test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentAppTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.StudentAppTest.testNextPageNavigation">
     <configuration name="StudentAppTest.checkIdNumberButton" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="student-app-test" />
       <option name="PACKAGE_NAME" value="" />
@@ -118,11 +87,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAppTest.checkValidationMessages" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAppTest.submitFormWithEmptyField" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="student-app-test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAppTest" />
-      <option name="METHOD_NAME" value="checkValidationMessages" />
+      <option name="METHOD_NAME" value="submitFormWithEmptyField" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentAppTest.submitFormWithWrongEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="student-app-test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentAppTest" />
+      <option name="METHOD_NAME" value="submitFormWithWrongEmail" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -142,13 +123,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentAppTest.testNextPageNavigation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="student-app-test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentAppTest" />
+      <option name="METHOD_NAME" value="testNextPageNavigation" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.StudentAppTest.testNextPageNavigation" />
+        <item itemvalue="TestNG.StudentAppTest.submitFormWithEmptyField" />
+        <item itemvalue="TestNG.StudentAppTest.submitFormWithWrongEmail" />
         <item itemvalue="TestNG.StudentAppTest.testLinkNavigation" />
         <item itemvalue="TestNG.StudentAppTest.checkIdNumberButton" />
-        <item itemvalue="TestNG.StudentAppTest.checkValidationMessages" />
-        <item itemvalue="Cucumber Java.Feature: create_student" />
-        <item itemvalue="TestNG.StudentAppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +217,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685279426773</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Student-app-test-05042023">
+      <created>1685297178697</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685297178697</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Student-app-test-05042023">
+      <created>1685297436433</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685297436433</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

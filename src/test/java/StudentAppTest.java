@@ -1,7 +1,7 @@
 import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -64,7 +64,7 @@ public class StudentAppTest {
         assertEquals(notifications.getDescriptionFromNotification(), String.format(WAS_ADDED_TO_THE_SYSTEM, name));
 
         notifications.getPopUpCloseButton().click();
-        //  assertTrue(driverWait.until(ExpectedConditions.invisibilityOf(notifications.getPopUpCloseButton())));
+        assertTrue(driverWait.until(ExpectedConditions.invisibilityOf(notifications.getPopUpCloseButton())));
     }
 
     @Test()
@@ -87,32 +87,26 @@ public class StudentAppTest {
     @Test(description = "Submit form with empty field and check validation message")
     public void submitFormWithEmptyField() {
         allStudentsPage.waitAndClickOnAddStudentButton();
-
         String name = dataFaker.name().firstName();
-        String email = dataFaker.internet().emailAddress();
+      //  String email = dataFaker.internet().emailAddress();
         addStudentPage.waitAndSetValueForNameField(name);
         addStudentPage.waitAndSetValueForEmailField(""); // empty e-mail field
         addStudentPage.waitAndSetGender(MALE);
         addStudentPage.clickOnSubmitButton();
-
-        String validationMessages = notifications.getValidationMessages();
-
-        System.out.println(validationMessages);
+        String explainError = notifications.getExplainError();
+        System.out.println(explainError);
     }
 
     @Test(description = "Submit form with email without domain part")
     public void submitFormWithWrongEmail() {
         allStudentsPage.waitAndClickOnAddStudentButton();
-
         String name = dataFaker.name().firstName();
         String email = dataFaker.internet().emailAddress();
         addStudentPage.waitAndSetValueForNameField(name);
         addStudentPage.waitAndSetValueForEmailField("qqq@qqq"); //incorrect e-mail
         addStudentPage.waitAndSetGender(MALE);
         addStudentPage.clickOnSubmitButton();
-
         String validationMessages = notifications.getValidationMessages();
-
         System.out.println(validationMessages);
     }
 
@@ -136,26 +130,49 @@ public class StudentAppTest {
     @Test(description = "Check the ID number button is clickable and changes the student list order")
     public void checkIdNumberButton() {
 
-        // Get the initial list of student names
         List<String> initialStudentList = allStudentsPage.getAllStudentNames();
-
-        // Click on ID number button
         notifications.clickIdNumberButton();
-
-        // Get the updated list of student names
         List<String> updatedStudentList = allStudentsPage.getAllStudentNames();
-
-        // Assert that the student list order has changed
         assertNotEquals(initialStudentList, updatedStudentList);
     }
 
     @Test
     public void testLinkNavigation() {
         allStudentsPage.clickLinkButton();
-        String expectedUrl = "https://acodemy.lv";
-        System.out.println("Expected result: " + expectedUrl);
+        List<String> windowHandles = new ArrayList<>(getInstance().getWindowHandles()); // get all windows
+        getInstance().switchTo().window(windowHandles.get(windowHandles.size() - 1)); // get last open window
+        String currentUrl = getInstance().getCurrentUrl();
+        String expectedUrl = APP_URL;
+        System.out.println("Current URL: " + currentUrl);
+        System.out.println("Expected URL: " + expectedUrl);
+        assertTrue(currentUrl.contains(expectedUrl));
     }
+
+    @Test
+    public void testNextPageNavigation() {
+        // Получение текущего списка студентов
+        List<String> initialStudentList = allStudentsPage.getAllStudentNames();
+
+        // Нажатие на кнопку "Next"
+        allStudentsPage.waitAndClickNextPageButton();
+
+        // Ожидание загрузки следующей страницы
+        WebDriverWait wait = new WebDriverWait(getInstance(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.stalenessOf(allStudentsPage.getAddStudentButton()));
+
+        // Получение нового списка студентов после перехода
+        List<String> newStudentList = allStudentsPage.getAllStudentNames();
+
+        // Проверка, что новый список студентов отличается от предыдущего
+        assertNotEquals(newStudentList, initialStudentList);
     }
+}
+
+
+
+
+
+
 
 
 

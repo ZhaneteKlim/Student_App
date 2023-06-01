@@ -20,6 +20,7 @@ import java.util.List;
 
 public class Notifications {
     private final WebDriverWait webDriverWait;
+
     private WebDriver driver;
 
     public Notifications() {
@@ -42,17 +43,19 @@ public class Notifications {
     @FindBy(how = How.CLASS_NAME, using = "ant-notification-notice-close")
     private WebElement popUpCloseButton;
 
-
-
-
+    @FindBy(how = How.CLASS_NAME, using = "ant-form-item-explain-error")
+    private WebElement explainError;
 
     public WebElement getPopUpCloseButton() {
         return popUpCloseButton;
     }
-
     public String getMessageFromNotification() {
         webDriverWait.until(ExpectedConditions.visibilityOf(notificationMessageElement));
         return notificationMessageElement.getText();
+    }
+    public String getExplainError() {
+        webDriverWait.until(ExpectedConditions.visibilityOf(explainError));
+        return explainError.getText();
     }
 
     public String getDescriptionFromNotification() {
@@ -76,13 +79,15 @@ public class Notifications {
         WebElement idNumberButton = driver.findElement(By.className("ant-table-column-title"));
         idNumberButton.click();
     }
+
     public void testLinkNavigation() {
         WebElement linkButton = driver.findElement(By.linkText("acodemy @ 2023"));
+
     }
-    //  public void clickLinkButton() {
-     //   linkButton.click();
-   // }
-    }
+
+}
+
+
 
 
 

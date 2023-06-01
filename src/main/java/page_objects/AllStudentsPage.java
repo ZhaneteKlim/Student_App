@@ -33,8 +33,8 @@ public class AllStudentsPage {
 
     public WebElement getAddStudentButton() {
         return addStudentButton;
-
     }
+
     @FindBy(how = How.CLASS_NAME, using = "ant-table-column-title")
     private WebElement clickIdNumberButton;
     public void waitAndClickIdNumberButton() {
@@ -42,6 +42,7 @@ public class AllStudentsPage {
       //  WebElement idNumberButton = driver.findElement(By.className("ant-table-column-title"));
         clickIdNumberButton.click();
     }
+
     @FindBy(how = How.XPATH, using = "//tr[@data-row-key='787']")
     private List<WebElement> studentNameElements;
 
@@ -60,6 +61,14 @@ public class AllStudentsPage {
 
     public void clickLinkButton() {
         linkButton.click();
+    }
+
+    @FindBy(how = How.PARTIAL_LINK_TEXT, using = "//div[@class='ant-pagination-next']//button")
+                                         ////div[@class='ant-table-title']//button
+    public WebElement nextPageButton;
+    public void waitAndClickNextPageButton() {
+        webDriverWait.until(elementToBeClickable(nextPageButton));
+        nextPageButton.click();
     }
 
     }
