@@ -63,7 +63,7 @@ public class AllStudentsPage {
         linkButton.click();
     }
 
-    @FindBy(how = How.XPATH, using = "//div[@class='ant-pagination-next']//button")
+    @FindBy(how = How.CLASS_NAME, using = "ant-pagination-item ant-pagination-item-5")
     public WebElement nextPageButton;
     public void clickNextPageButton() {
        // webDriverWait.until(elementToBeClickable(nextPageButton));
