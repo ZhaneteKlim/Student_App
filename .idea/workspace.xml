@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4e931e18-db22-45ea-afeb-1d777812d714" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,18 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.StudentAppTest.testNextPageNavigation">
+  <component name="RunManager" selected="TestNG.StudentAppTest">
+    <configuration name="StudentAppTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="student-app-test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentAppTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudentAppTest.checkIdNumberButton" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="student-app-test" />
       <option name="PACKAGE_NAME" value="" />
@@ -109,18 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAppTest.testLinkNavigation" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="student-app-test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentAppTest" />
-      <option name="METHOD_NAME" value="testLinkNavigation" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StudentAppTest.testNextPageNavigation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="student-app-test" />
       <option name="PACKAGE_NAME" value="" />
@@ -135,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.StudentAppTest" />
+        <item itemvalue="TestNG.StudentAppTest.checkIdNumberButton" />
         <item itemvalue="TestNG.StudentAppTest.testNextPageNavigation" />
         <item itemvalue="TestNG.StudentAppTest.submitFormWithEmptyField" />
         <item itemvalue="TestNG.StudentAppTest.submitFormWithWrongEmail" />
-        <item itemvalue="TestNG.StudentAppTest.testLinkNavigation" />
-        <item itemvalue="TestNG.StudentAppTest.checkIdNumberButton" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685650261381</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Student-app-test-05042023">
+      <created>1685893931575</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685893931575</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
