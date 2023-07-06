@@ -5,6 +5,5 @@ public class NotificationStepsDefs {
     @Then("user is created")
     public void user_is_created() {
         throw new PendingException();
-        // Write code here that turns the phrase above into concrete actions
     }
 }

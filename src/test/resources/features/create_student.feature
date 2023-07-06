@@ -9,6 +9,7 @@ Feature: Create student feature
     And user enters '<gender>' in gender field
     When user click on submit button
     Then user is created
+
     Examples:
       |gender|
       |MALE  |

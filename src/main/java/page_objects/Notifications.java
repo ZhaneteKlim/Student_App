@@ -82,9 +82,7 @@ public class Notifications {
 
     public void testLinkNavigation() {
         WebElement linkButton = driver.findElement(By.linkText("acodemy @ 2023"));
-
     }
-
 }
 
 

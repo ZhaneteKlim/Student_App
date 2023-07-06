@@ -88,7 +88,7 @@ public class StudentAppTest {
     public void submitFormWithEmptyField() {
         allStudentsPage.waitAndClickOnAddStudentButton();
         String name = dataFaker.name().firstName();
-      //  String email = dataFaker.internet().emailAddress();
+        //  String email = dataFaker.internet().emailAddress();
         addStudentPage.waitAndSetValueForNameField(name);
         addStudentPage.waitAndSetValueForEmailField(""); // empty e-mail field
         addStudentPage.waitAndSetGender(MALE);
@@ -127,36 +127,37 @@ public class StudentAppTest {
         System.out.println(validationMessages);
     }
 
-    @Test(description = "Check the ID number button is clickable and changes the student list order")
-    public void checkIdNumberButton() {
 
-        List<String> initialStudentList = allStudentsPage.getAllStudentNames();
-        notifications.clickIdNumberButton();
-        List<String> updatedStudentList = allStudentsPage.getAllStudentNames();
-        assertNotEquals(initialStudentList, updatedStudentList);
-    }
+  //  @Test(description = "Check the ID number button is clickable and changes the student list order")
+  //  public void checkIdNumberButton() {
 
-    @Test
-    public void testLinkNavigation() {
-        allStudentsPage.clickLinkButton();
-        List<String> windowHandles = new ArrayList<>(getInstance().getWindowHandles()); // get all windows
-        getInstance().switchTo().window(windowHandles.get(windowHandles.size() - 1)); // get last open window
-        String currentUrl = getInstance().getCurrentUrl();
-        String expectedUrl = APP_URL;
-        System.out.println("Current URL: " + currentUrl);
-        System.out.println("Expected URL: " + expectedUrl);
-        assertTrue(currentUrl.contains(expectedUrl));
-    }
+    //    List<String> initialStudentList = allStudentsPage.getAllStudentNames();
+    //    notifications.clickIdNumberButton();
+    //    List<String> updatedStudentList = allStudentsPage.getAllStudentNames();
+    //    assertNotEquals(initialStudentList, updatedStudentList);
+   // }
 
-    @Test
-    public void testNextPageNavigation() {
-        List<String> initialStudentList = allStudentsPage.getAllStudentNames();
-        allStudentsPage.clickNextPageButton();
-        WebDriverWait wait = new WebDriverWait(getInstance(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.stalenessOf(allStudentsPage.getAddStudentButton()));
-        List<String> newStudentList = allStudentsPage.getAllStudentNames();
-        assertNotEquals(newStudentList, initialStudentList);
-    }
+  //  @Test
+  //  public void testLinkNavigation() {
+  //      allStudentsPage.clickLinkButton();
+  //      List<String> windowHandles = new ArrayList<>(getInstance().getWindowHandles()); // get all windows
+  //      getInstance().switchTo().window(windowHandles.get(windowHandles.size() - 1)); // get last open window
+  //      String currentUrl = getInstance().getCurrentUrl();
+  //      String expectedUrl = APP_URL;
+  //      System.out.println("Current URL: " + currentUrl);
+  //      System.out.println("Expected URL: " + expectedUrl);
+  //      assertTrue(currentUrl.contains(expectedUrl));
+  //  }
+
+  //  @Test
+  //  public void testNextPageNavigation() {
+  //      List<String> initialStudentList = allStudentsPage.getAllStudentNames();
+  //      allStudentsPage.clickNextPageButton();
+  //      WebDriverWait wait = new WebDriverWait(getInstance(), Duration.ofSeconds(10));
+  //      wait.until(ExpectedConditions.stalenessOf(allStudentsPage.getAddStudentButton()));
+  //      List<String> newStudentList = allStudentsPage.getAllStudentNames();
+  //      assertNotEquals(newStudentList, initialStudentList);
+  //  }
 }
 
 

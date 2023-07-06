@@ -35,7 +35,7 @@ public class AllStudentsPage {
         return addStudentButton;
     }
 
-    @FindBy(how = How.CLASS_NAME, using = "ant-table-column-title")
+    @FindBy(how = How.CLASS_NAME, using = "ant-table-column-sorter")
     private WebElement clickIdNumberButton;
     public void waitAndClickIdNumberButton() {
         webDriverWait.until(elementToBeClickable(clickIdNumberButton));

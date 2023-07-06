@@ -1,7 +1,6 @@
 package step_definitions;
 import io.cucumber.java.en.Given;
 import utils.DriverManager;
-
 import static utils.ConfigHelper.getConfig;
 import static utils.DriverManager.getInstance;
 

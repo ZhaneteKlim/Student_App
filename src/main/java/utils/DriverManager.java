@@ -8,19 +8,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-
 import static utils.ConfigHelper.getConfig;
 
 public class DriverManager {
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
     public static String testName;
 
-    // Singleton pattern
     public static WebDriver getInstance() {
         if (driverThreadLocal.get() == null) {
             if (getConfig().getBoolean("student.app.run.locally")) {
@@ -63,17 +60,13 @@ public class DriverManager {
         sauceOptions.setCapability("browserVersion", "latest");
         return sauceOptions;
     }
-
     private static Capabilities configureOptions() {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("sauce:options", configureCapabilities());
         return options;
     }
-
     public static void markRemoteTest(ITestResult result) {
         String status = result.isSuccess() ? "passed" : "failed";
         ((JavascriptExecutor) getInstance()).executeScript("sauce:job-result=" + status);
     }
-
-
 }

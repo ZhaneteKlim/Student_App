@@ -16,12 +16,10 @@ public class AddStudentPage {
     private final WebDriver driver = DriverManager.getInstance();
     private final WebDriverWait webDriverWait;
 
-
     public AddStudentPage() {
         this.webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
-
     @FindBy(how = How.ID, using = "name")
     private WebElement nameField;
 
